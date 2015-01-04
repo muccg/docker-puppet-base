@@ -1,7 +1,7 @@
 FROM muccg/base:centos6
 MAINTAINER ccg <ccgdevops@googlegroups.com>
 
-RUN yum install -y \
+RUN yum clean all && yum install -y \
   git \
   ruby \
   ruby-devel \
