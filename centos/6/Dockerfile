@@ -4,7 +4,8 @@ MAINTAINER ccg <ccgdevops@googlegroups.com>
 RUN yum install -y \
   git \
   ruby \
-  ruby-devel
+  ruby-devel \
+  rubygems
 
 RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 RUN gem install puppet
