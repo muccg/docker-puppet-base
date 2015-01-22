@@ -3,7 +3,7 @@ MAINTAINER ccg <ccgdevops@googlegroups.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-# install and use wget to fetch the package that does the puppelatbs repo setup
+# install and use wget to fetch the package that does the puppetlabs repo setup
 RUN apt-get update && apt-get install -qy \
    wget \
    && wget --no-check-certificate https://apt.puppetlabs.com/puppetlabs-release-trusty.deb \
