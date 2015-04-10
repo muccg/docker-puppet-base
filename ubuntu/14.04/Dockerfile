@@ -12,13 +12,7 @@ RUN apt-get update && apt-get install -qy --no-install-recommends \
 
 # puppet labs repo should be configured at this layer
 RUN apt-get update && apt-get install -qy  --no-install-recommends \
-  git \
   puppet \
   ruby \
-  ruby-dev \
   && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN env --unset=DEBIAN_FRONTEND
-
-# Install puppet librarian
-# set version 1.4.0 if thats prefered
-RUN echo "gem: --no-ri --no-rdoc" > ~/.gemrc && gem install librarian-puppet
